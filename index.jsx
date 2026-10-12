@@ -4,8 +4,11 @@ import './index.css'
 const Clock = () => {
   const [date, setDate] = useState(new Date())
   useEffect(() => {
-    setInterval(setDate(new Date()), 1000)
-  })
+    setInterval(() => {
+      setDate(new Date())
+    }, 1000)
+    console.log('hello')
+  }, [])
 
   return (
     <div className="clock-container">
