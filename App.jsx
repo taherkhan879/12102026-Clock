@@ -7,6 +7,9 @@ const App = () => {
   const [isMounted, setIsMounted] = useState(false)
   const onToggeleClock = () => {
     setIsMounted(prevMounted => !prevMounted)
+    const date = new Date()
+    console.log(date)
+    console.log(date.toLocaleTimeString())
   }
   return (
     <div className="app-container">
